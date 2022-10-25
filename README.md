@@ -1,5 +1,5 @@
 # Deployed link: 
-water-intake-tracker.netlify.app
+[water-intake-tracker.netlify.app](https://water-intake-tracker.netlify.app/)
 
 # Getting Started with Create React App
 
