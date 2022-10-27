@@ -77,6 +77,7 @@ export function Form() {
   const handleCalculateClick = function (event) {
     const data = { userName, age, gender, addInfo };
     setIsActive(false);
+    setColor(currentColor);
     if (age >= 1 && age <= 3) {
       setCalculate(userName + ", your task for today is to drink 0.8 litres.");
     }
@@ -117,7 +118,6 @@ export function Form() {
       setCalculate("Insufficient Data");
     }
     console.log(data);
-    setColor(currentColor);
   };
 
   const [color, setColor] = useState();
