@@ -1,7 +1,7 @@
 import "./App.css";
-import { ImageGif } from "./components/image.js";
-import { Form } from "./components/form.js";
-import { RandomQuotes } from "./components/RandomQuotes.js";
+import { ImageGif } from "./components/image.jsx";
+import { Form } from "./components/form.jsx";
+import { RandomQuotes } from "./components/RandomQuotes.jsx";
 
 function App() {
   return (
