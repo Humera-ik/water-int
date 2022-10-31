@@ -13,7 +13,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
-      matrix:
+      matrix:s
         node-version:
           - 16.x
     steps:
