@@ -1,3 +1,6 @@
+# Water Intake Tracker
+It's the app for tracking how much water you need to take in daily life.
+
 # Deployed link: 
 [water-intake-tracker.netlify.app](https://water-intake-tracker.netlify.app/)
 
