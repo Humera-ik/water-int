@@ -1,4 +1,4 @@
-#Water Intake Tracker
+# Water Intake Tracker
 It's the app for tracking how much water you need to take in daily life.
 
 # Deployed link: 
