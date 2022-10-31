@@ -10,5 +10,5 @@ h5 {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  align-content: center;
+  align-content: space-around;
 }
