@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./RandomQuotes.css";
 
 const quotes = [
@@ -11,13 +11,9 @@ const quotes = [
 export function RandomQuotes() {
   const [quote, setQuote] = useState("");
 
-  const random = function (event) {
+  useEffect(() => {
     setQuote(quotes[Math.floor(Math.random() * 5)]);
-  };
+  }, []);
 
-  return (
-    <p className="style" onLoad={random} value={quote}>
-      {quote}
-    </p>
-  );
+  return <p className="style">{quote}</p>;
 }
