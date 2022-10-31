@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./RandomQuotes.css";
+<style>@import url('http://fonts.cdnfonts.com/css/papyrus');</style>;
 
 const quotes = [
   '"Drink water slowly & sip by sip"',
