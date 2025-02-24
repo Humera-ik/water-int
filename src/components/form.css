@@ -1,10 +1,11 @@
 .form {
-  border: 5px solid black;
-  padding: 10px;
-  background-color: black;
-  color: cornsilk;
   font-size: 15px;
   font-weight: bold;
+  width: 40vw;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .input {
   width: 30%;
@@ -16,27 +17,28 @@ p {
 }
 
 .change {
-  color: #f3edf0;
-  background-color: #39129d;
-  border: 5px #f8f5f5;
+  color: aliceblue;
+  background-color: rgba(0, 0, 0, 0.58);
+  border: 5px rgba(0, 0, 0, 0.58);
   font-weight: bold;
   font-size: 15px;
 }
 .sep {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 1rem;
+  padding-right: 1rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-
+form legend {
+  font-size: 1rem;
+}
 .border {
-  border: 2px solid cornsilk;
-  width: 600px;
-  height: 300px;
+  width: 90vmin;
+  height: 50vmin;
 }
 button:hover {
-  background-color: white;
-  color: #39129d;
+  background-color: aliceblue;
+  color: black;
 }

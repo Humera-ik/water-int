@@ -123,118 +123,123 @@ export function Form() {
   const [color, setColor] = useState();
 
   const colors = [
-    "Aquamarine",
-    "BlueViole",
-    "Chartreuse",
+    "Brown",
+    "BlueViolet",
+    "Rebeccapurple",
     "CornflowerBlue",
     "Red",
-    "Yellow",
-    "Magenta",
-    "Pink",
+    "Black",
+    "Blue",
+    "Violet",
   ];
   const currentColor = colors[Math.floor(Math.random() * 8)];
   const divStyle = { color: color };
 
   return (
     <form className="form">
-      {isActive ? (
-        <div className="border">
-          <br />
-          <br />
-          <div className="sep">
-            <label for="name">Name</label>
+      <fieldset>
+        <legend>
+          <h1>Water Intake Tracker</h1>
+        </legend>
+        {isActive ? (
+          <div className="border">
             <br />
+            <br />
+            <div className="sep">
+              <label for="name">Name</label>
+              <br />
+              <input
+                id="name"
+                type="text"
+                onChange={handleNameChange}
+                value={userName}
+                className="input"
+                placeholder="Enter your Name"
+                required
+              />
+              <br />
+              <label for="age">Age</label>
+              <br />
+              <input
+                id="age"
+                placeholder="Enter your Age"
+                className="input"
+                type="number"
+                onChange={handleAgeChange}
+                value={age}
+                min="0"
+                max="80"
+                required
+              />
+            </div>
+            <br />
+            <br />
+            <p>Gender: </p>
             <input
-              id="name"
-              type="text"
-              onChange={handleNameChange}
-              value={userName}
-              className="input"
-              placeholder="Enter your Name"
-              required
+              type="radio"
+              id="Female"
+              name="Gender"
+              onChange={handleGenderChange}
+              checked={gender === "Female"}
+              value="Female"
+              onClick={() => setGender("Female")}
             />
-            <br />
-            <label for="age">Age</label>
-            <br />
+            <label for="Female">Female</label>
             <input
-              id="age"
-              placeholder="Enter your Age"
-              className="input"
-              type="number"
-              onChange={handleAgeChange}
-              value={age}
-              min="0"
-              max="80"
-              required
+              type="radio"
+              id="Male"
+              name="Gender"
+              onChange={handleGenderChange}
+              checked={gender === "Male"}
+              value="Male"
+              onClick={() => setGender("Male")}
             />
+            <label for="Male">Male</label>
+            <br />
+            <br />
+            <br />
+            <label for="addinfo">Additional Information</label>
+            <br />
+            <select
+              className="input"
+              name="addInfo"
+              onChange={handleAddInfoChange}
+              value={addInfo}
+              id="addinfo"
+            >
+              <option value="None">None</option>
+              <option value="Pregnant-women">Pregnant Women</option>
+              <option value="Breastfeeding-women">Breastfeeding Women</option>
+            </select>
+            <br />
+            <br />
+            <br />
+            <button
+              type="button"
+              className="change input"
+              onClick={handleCalculateClick}
+              name="calbutton"
+            >
+              Calculate
+            </button>
+            <br />
+            <br />
+            <br />
           </div>
-          <br />
-          <br />
-          <p>Gender: </p>
-          <input
-            type="radio"
-            id="Female"
-            name="Gender"
-            onChange={handleGenderChange}
-            checked={gender === "Female"}
-            value="Female"
-            onClick={() => setGender("Female")}
-          />
-          <label for="Female">Female</label>
-          <input
-            type="radio"
-            id="Male"
-            name="Gender"
-            onChange={handleGenderChange}
-            checked={gender === "Male"}
-            value="Male"
-            onClick={() => setGender("Male")}
-          />
-          <label for="Male">Male</label>
-          <br />
-          <br />
-          <br />
-          <label for="addinfo">Additional Information</label>
-          <br />
-          <select
-            className="input"
-            name="addInfo"
-            onChange={handleAddInfoChange}
-            value={addInfo}
-            id="addinfo"
-          >
-            <option value="None">None</option>
-            <option value="Pregnant-women">Pregnant Women</option>
-            <option value="Breastfeeding-women">Breastfeeding Women</option>
-          </select>
-          <br />
-          <br />
-          <br />
-          <button
-            type="button"
-            className="change input"
-            onClick={handleCalculateClick}
-            name="calbutton"
-          >
-            Calculate
-          </button>
-          <br />
-          <br />
-          <br />
-        </div>
-      ) : (
-        <div className="border">
-          <br />
-          <div style={divStyle}>{calculate}</div>
-          <br />
-          <br />
-          <button className="change input" onClick={() => setIsActive(false)}>
-            Back
-          </button>
-          <br />
-          <br />
-        </div>
-      )}
+        ) : (
+          <div className="border">
+            <br />
+            <div style={divStyle}>{calculate}</div>
+            <br />
+            <br />
+            <button className="change input" onClick={() => setIsActive(false)}>
+              Back
+            </button>
+            <br />
+            <br />
+          </div>
+        )}
+      </fieldset>
     </form>
   );
 }
