@@ -11,6 +11,3 @@ body {
   display: grid;
   grid-template: 1fr/1fr 1fr;
 }
-h5 {
-  margin-top: 1rem;
-}

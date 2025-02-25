@@ -11,7 +11,6 @@ function App() {
         <Form />
       </div>
       <RandomQuotes />
-      <h5>Created By: Humera</h5>
     </div>
   );
 }
